@@ -39,7 +39,6 @@ import (
 	"github.com/iawia002/annie/extractors/xvideos"
 	"github.com/iawia002/annie/extractors/yinyuetai"
 	"github.com/iawia002/annie/extractors/youku"
-	"github.com/iawia002/annie/extractors/youtube"
 	"github.com/iawia002/annie/utils"
 )
 
@@ -118,8 +117,6 @@ func download(videoURL string) error {
 		data, err = pixivision.Extract(videoURL)
 	case "youku":
 		data, err = youku.Extract(videoURL)
-	case "youtube", "youtu": // youtu.be
-		data, err = youtube.Extract(videoURL)
 	case "iqiyi":
 		data, err = iqiyi.Extract(videoURL)
 	case "mgtv":
